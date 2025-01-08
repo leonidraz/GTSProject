@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="519.0" prefWidth="724.0" styleClass="AtsPanel" stylesheets="@../../css/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project_gts.project_gts.controllers.forms.SubscribersInfoController">
+    <children>
+        <Pane layoutX="590.0" layoutY="25.0" prefHeight="200.0" prefWidth="200.0" styleClass="AtsBoardBtnBg" />
+        <AnchorPane layoutX="8.0" layoutY="6.0" prefHeight="200.0" prefWidth="200.0" styleClass="AtsBoard">
+            <children>
+                <Label fx:id="totalEntries" layoutX="14.0" layoutY="23.0" styleClass="AtsBoardLabel" text="Всего записей: 0" />
+            </children>
+        </AnchorPane>
+        <Pane layoutX="345.0" layoutY="25.0" prefHeight="200.0" prefWidth="200.0" styleClass="AtsBoardBtnBg" />
+        <Pane layoutX="467.0" layoutY="25.0" prefHeight="200.0" prefWidth="200.0" styleClass="AtsBoardBtnBg" />
+        <Button layoutX="594.0" layoutY="20.0" mnemonicParsing="false" styleClass="AtsBoardBtn" text="Удалить" />
+        <Button layoutX="471.0" layoutY="20.0" mnemonicParsing="false" styleClass="AtsBoardBtn" text="Добавить" />
+        <TableView fx:id="SubscribersTable" layoutX="21.0" layoutY="167.0" prefHeight="342.0" prefWidth="685.0" styleClass="atsTable">
+            <columns>
+                <TableColumn prefWidth="75.0" text="C1" />
+                <TableColumn prefWidth="75.0" text="C2" />
+                <TableColumn prefWidth="75.0" text="C2" />
+                <TableColumn prefWidth="75.0" text="C2" />
+                <TableColumn prefWidth="75.0" text="C2" />
+                <TableColumn prefWidth="75.0" text="C2" />
+                <TableColumn prefWidth="75.0" text="C2" />
+                <TableColumn prefWidth="75.0" text="C2" />
+                <TableColumn prefWidth="75.0" text="C2" />
+            </columns>
+        </TableView>
+        <Button layoutX="349.0" layoutY="20.0" mnemonicParsing="false" styleClass="AtsBoardBtn" text="Изменить" />
+        <TextField fx:id="filterByFio" layoutX="21.0" layoutY="108.0" styleClass="AtsPanelInputAndComboBox" />
+        <Label fx:id="fioLabel" layoutX="42.0" layoutY="97.0" styleClass="AtsPanelNameInput" text="ФИО" />
+        <Button onAction="#handleRatioSubscribersButtonClick" layoutX="606.0" layoutY="108.0" mnemonicParsing="false" prefWidth="117.0" text="Доля типов">
+         <styleClass>
+            <String fx:value="AtsBoardBtn" />
+            <String fx:value="SubscribersBtnQuery" />
+         </styleClass>
+        </Button>
+        <TextField fx:id="filterByDistrict" layoutX="345.0" layoutY="108.0" styleClass="AtsPanelInputAndComboBox" />
+        <Label fx:id="districtLabel" layoutX="365.0" layoutY="97.0" styleClass="AtsPanelNameInput" text="Район" />
+      <ComboBox fx:id="filterByAts" layoutX="183.0" layoutY="108.0" prefWidth="150.0" styleClass="AtsPanelInputAndComboBox" />
+        <Label fx:id="atsNameLabel" layoutX="201.0" layoutY="97.0" styleClass="AtsPanelNameInput" text="Выбрать АТС" />
+      <Button onAction="#handleGroupByLastNameButtonClick" layoutX="501.0" layoutY="108.0" mnemonicParsing="false" prefWidth="91.0" text="Фамилии">
+         <styleClass>
+            <String fx:value="AtsBoardBtn" />
+            <String fx:value="SubscribersBtnQuery" />
+         </styleClass>
+      </Button>
+      <Button layoutX="291.0" layoutY="22.0" mnemonicParsing="false" onAction="#showFilterPopUp" styleClass="SubscribersPanelFilterBtn">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/filter.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <AnchorPane fx:id="SubscribersFilterPanel" prefHeight="200.0" prefWidth="200.0" styleClass="SubscribersFilterPanel" visible="false">
+         <children>
+            <Label layoutX="323.0" layoutY="15.0" styleClass="SubscribersFilterPanelTitle" text="Фильтры" />
+            <Button layoutX="689.0" layoutY="12.0" mnemonicParsing="false" onAction="#hideFilterPopUp" styleClass="ListSubscribersPopUpBtn" />
+            <Label layoutX="37.0" layoutY="67.0" styleClass="FilterName" text="Тип АТС" />
+            <Label layoutX="37.0" layoutY="151.0" styleClass="FilterName" text="Возраст" />
+            <Label layoutX="384.0" layoutY="67.0" styleClass="FilterName" text="Пол" />
+            <Label layoutX="382.0" layoutY="152.0" styleClass="FilterName" text="Тип телефона" />
+            <Label layoutX="150.0" layoutY="151.0" styleClass="FilterName" text="Категории" />
+            <ComboBox fx:id="operatorComboBox" layoutX="37.0" layoutY="187.0" prefWidth="150.0" promptText="&gt;" styleClass="ageOperatorComboBox" />
+            <TextField fx:id="ageFilterField" layoutX="95.0" layoutY="188.0" styleClass="ageInput" />
+            <CheckBox fx:id="cityCheckbox" layoutX="37.0" layoutY="103.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="93.0" styleClass="chips" text="Городская" />
+            <CheckBox fx:id="departmentCheckbox" layoutX="134.0" layoutY="103.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="93.0" styleClass="chips" text="Ведомств." />
+            <CheckBox fx:id="institutionCheckbox" layoutX="231.0" layoutY="103.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="93.0" styleClass="chips" text="Учрежден." />
+            <CheckBox fx:id="privilegedCheckbox" layoutX="247.0" layoutY="187.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="93.0" styleClass="chips" text="Льготники" />
+            <CheckBox fx:id="regularCheckbox" layoutX="150.0" layoutY="187.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="93.0" styleClass="chips" text="Обычные" />
+             <RadioButton fx:id="maleRadioButton" layoutX="384.0" layoutY="105.0" text="мужской" />
+             <RadioButton fx:id="femaleRadioButton" layoutX="483.0" layoutY="105.0" text="женский" />
+             <RadioButton fx:id="allRadioButton" layoutX="583.0" layoutY="105.0" selected="true" text="все" />
+             <CheckBox fx:id="mainPhoneCheckbox" layoutX="382.0" layoutY="196.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="93.0" styleClass="chips" text="Основной" />
+            <CheckBox fx:id="parallelPhoneCheckbox" layoutX="479.0" layoutY="196.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="93.0" styleClass="chips" text="Параллель." />
+            <CheckBox fx:id="pairedPhoneCheckbox" layoutX="576.0" layoutY="196.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="93.0" styleClass="chips" text="Спаренный" />
+         </children></AnchorPane>
+    </children>
+</AnchorPane>

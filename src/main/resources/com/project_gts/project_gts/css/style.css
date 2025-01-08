@@ -1,0 +1,766 @@
+@font-face {
+    font-family: "Arial Regular";
+    src: url("../fonts/ArialRegular.ttf");
+}
+
+@font-face {
+    font-family: "Arial Bold";
+    src: url("../fonts/ArialBold.ttf");
+}
+
+@font-face {
+    font-family: "Inter SemiBold";
+    src: url("../fonts/InterSemiBold.ttf");
+}
+
+AnchorPane {
+    -fx-font-family: "Arial Regular";
+    -fx-background-color: #D3D3FF;
+}
+
+Hyperlink {
+    -fx-underline: false;
+    -fx-text-fill: inherit;
+    -fx-cursor: hand; 
+    -fx-border-width: 0;  
+    -fx-padding: 0 0 0 5px;     
+}
+
+Hyperlink:hover {
+    -fx-background-color: #4a4a91;
+    -fx-background-radius: 10px;
+}
+
+/*Стили для страницы входа*/
+.EnterForm {
+    -fx-background-color: #9D9DCC;
+    -fx-background-radius: 42px;
+}
+
+.EnterAndRegFormTitle {
+    -fx-font-family: "Arial Bold";
+    -fx-font-size: 34px;
+}
+
+.EnterAndRegFormInput {
+    -fx-font-family: 'Arial Regular';
+    -fx-font-size: 20px;
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 12px;
+    -fx-prompt-text-fill: #A195B3;
+    -fx-text-fill: #A195B3;
+    -fx-padding: 0 19px 0 19px;
+}
+
+.EnterFormLink {
+    -fx-font-size: 18px;
+    -fx-text-fill: #6A5688;
+    -fx-underline: true;
+}
+
+.EnterAndRegFormBtn, .AdminBtn {
+    -fx-font-size: 17px;
+    -fx-background-color: #575799;
+    -fx-text-fill: #ffffff;
+    -fx-cursor: hand;
+}
+
+.EnterAndRegFormBtn {
+    -fx-pref-width: 154px;
+    -fx-pref-height: 51px;
+    -fx-background-radius: 8px;
+    /* -fx-padding: 16px 46px 16px 46px; */
+}
+
+.AdminBtn {
+    -fx-background-radius: 0 15px 0 0;
+    -fx-padding: 14px 15px 14px 15px;
+}
+
+.EnterAndRegContent{
+    -fx-background-color: #575799;
+    -fx-background-radius: 140px 0 0 140px;
+}
+
+.EnterAndRegContentTitle {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 42px;
+    -fx-font-weight: 700;
+}
+
+.EnterAndRegContentDescription {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 23px;
+}
+
+.EnterAndRegContentBtn {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 17px;
+    -fx-background-color: transparent;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+    -fx-pref-height: 48px;
+    -fx-padding: 0 48px 0 48px;
+    -fx-cursor: hand;
+}
+
+/*Стили для страницы регистрации*/
+.RegForm {
+    -fx-background-color: #9D9DCC;
+    -fx-background-radius: 31px;
+}
+
+.RegFormBtn {
+    -fx-pref-width: 356px;
+    -fx-pref-height: 54px;
+}
+
+.RegFormGroupInput {
+    -fx-font-size: 18px;
+    -fx-text-fill: #6A5688;
+}
+
+
+/*Стили для модального окна (Админ-панель)*/
+.ModalStage {
+    -fx-background-color: #35355E;
+    -fx-background-radius: 35px; 
+}
+
+.ModalContainer {
+    -fx-alignment: TOP_CENTER;
+    -fx-pref-width: 264px;
+    -fx-pref-height: 242px;
+    -fx-spacing: 18px;
+}
+
+.ModalContainerTitle {
+    -fx-font-size: 25px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #FFFFFF;
+    -fx-padding: 0 0 21px 0;
+}
+
+.ModalContainerInput {
+    -fx-font-family: 'Arial Regular';
+    -fx-font-size: 20px;
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 10px;
+    -fx-prompt-text-fill: #A195B3;
+    -fx-text-fill: #A195B3;
+    -fx-prev-height: 45px;
+}
+
+.ModalContainerBtn {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 17px;
+    -fx-background-color: #575799;
+    -fx-background-radius: 7px;
+    -fx-padding: 9px 50px 9px 50px;
+    -fx-translate-y: 8px;
+    -fx-cursor: hand;
+}
+
+.ExetBtn {
+    -fx-background-color: transparent;
+    -fx-pref-width: 30px;
+    -fx-pref-height: 30px;
+    -fx-cursor: hand;
+}
+
+/*Стили для главного окна (админ)*/
+.PopUpMenu, .MainPanel {
+    -fx-background-color: #505088;
+    -fx-background-radius: 20px;
+}
+
+.PopUpMenu {
+    -fx-pref-width: 215px;
+    -fx-pref-height: 557px;
+    -fx-spacing: 14px;
+    -fx-padding: 31px 0px 0px 0px;
+}
+
+.PopUpMenuInner {
+    -fx-pref-height: 25px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-spacing: 5px;
+    -fx-padding: 0px 0px 0px 23px;
+}
+
+.MainPanel {
+    -fx-pref-width: 968px;
+    -fx-pref-height: 98px;
+}
+
+.BurgerMenuBtn {
+    -fx-background-color: transparent;
+    -fx-background-image: url("../images/burgerMenuIcon.png");
+    -fx-background-size: 40px 40px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-pref-width: 40px;
+    -fx-pref-height: 40px;
+    -fx-cursor: hand;
+    -fx-transition: all 0.5s;
+}
+
+.BurgerMenuBtn:hover {
+    -fx-background-color: #4a4a91;
+    -fx-background-radius: 10px;
+}
+
+.MainPanelTitle {
+    -fx-text-fill: #A195B3;
+    -fx-font-size: 30px;
+}
+
+.MainPanelDropList {
+    -fx-background-color: transparent; 
+    -fx-border-color: #282846; 
+    -fx-border-width: 2px; 
+    -fx-border-radius: 5px; 
+    -fx-font-family: "Arial Regular"; 
+    -fx-font-size: 20px; 
+    -fx-max-width: 285px;
+    -fx-padding: 0px 5px 0px 0px;
+}
+
+.combo-box .list-cell:hover {
+    -fx-background-color: #9D9DCC;
+    -fx-text-fill: #ece0e0;
+}
+
+.combo-box .list-cell:focused {
+    -fx-background-color: #3d3d63;
+    -fx-text-fill: #ece0e0;
+}
+
+.combo-box .list-cell {
+    -fx-text-fill: #A195B3;
+}
+
+.combo-box-base .arrow-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0 0 0 5px; 
+}
+
+.combo-box-base .arrow-button .arrow {
+    -fx-background-color: #A195B3;
+    -fx-pref-width: 17px;
+    -fx-pref-height: 9px;
+}
+
+.MainPanelProfileContainer {
+    -fx-background-color: #9D9DCC;
+    -fx-background-radius: 20px;
+    -fx-pref-width: 136px;
+    -fx-pref-height: 55px;
+}
+
+.MainPanelExetBtn {
+    -fx-background-color: transparent;
+    -fx-background-image: url("../images/exetMainBtn.png");
+    -fx-background-size: 35px 35px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-pref-width: 35px;
+    -fx-pref-height: 35px;
+    -fx-cursor: hand;
+    -fx-padding: 10px;
+}
+
+.MainPanelExetBtn:hover {
+    -fx-background-color: #4a4a91;
+    -fx-background-radius: 10px;
+}
+
+.MainPanelProfileCircle {
+    -fx-background-color: #D9D9D9;
+    -fx-background-radius: 50%;
+    -fx-pref-width: 40px;
+    -fx-pref-height: 40px;
+}
+
+.MainPanelProfileCircleText {
+    -fx-font-size: 20px;
+    -fx-text-fill: #A195B3;
+}
+
+.MainPanelProfileContainerText {
+    -fx-font-size: 20px;
+    -fx-text-fill: #FFFFFF;
+}
+
+.PopUpMenuIcon {
+    -fx-fit-width: 20px;
+    -fx-fit-height: 20px;
+}
+
+.PopUpMenuLink {
+    -fx-font-size: 20px;
+    -fx-text-fill: #A195B3;
+    -fx-pref-width: 150px;
+}
+
+.PopUpMenuLinkActive {
+    -fx-text-fill: #D8C8F1;
+}
+
+.CountSubscribersCard {
+    -fx-background-color: #575799;
+    -fx-opacity: 0.67;
+    -fx-background-radius: 20px;
+    -fx-pref-width: 253px;
+    -fx-pref-height: 205px;
+}
+
+.ListAtcCard {
+    -fx-background-color: #9D9DCC;
+    -fx-background-radius: 20px;
+    -fx-pref-width: 441px;
+    -fx-pref-height: 205px;
+}
+
+.RatioSubscribersCard {
+    -fx-background-color: #9D9DCC;
+    -fx-background-radius: 20px;
+    -fx-pref-width: 189px;
+    -fx-pref-height: 205px;
+}
+
+.CountDebtorsCard {
+    -fx-background-color: #FFFFFF;
+    -fx-opacity: 0.55;
+    -fx-background-radius: 20px;
+    -fx-pref-width: 240px;
+    -fx-pref-height: 205px;
+}
+
+.DescriptionCard {
+    -fx-background-color: #575799;
+    -fx-opacity: 0.67;
+    -fx-background-radius: 20px;
+    -fx-pref-width: 240px;
+    -fx-pref-height: 205px;
+}
+
+.CountSubscribersCardBg {
+    -fx-fit-width: 255px;
+    -fx-fit-height: 313px;
+}
+
+.CountDebtorsCardBg {
+    -fx-fit-width: 257px;
+    -fx-fit-height: 276px;
+}
+
+.DescriptionCardBg {
+    -fx-fit-width: 62.5px;
+    -fx-fit-height: 58px;
+}
+
+.RatioSubscribersCardBg {
+    -fx-fit-width: 137px;
+    -fx-fit-height: 94.5px;
+}
+
+.CountSubscribersCircle {
+    -fx-background-color: #D9D9D9;
+    -fx-background-radius: 50%;
+    -fx-pref-width: 80px;
+    -fx-pref-height: 80px;
+}
+
+.CountSubscribersCardIcon {
+    -fx-fit-width: 55px;
+    -fx-fit-height: 55px;
+}
+
+.CountSubscribersText {
+    -fx-font-family: "Arial Bold";
+    -fx-font-size: 25px;
+    -fx-text-fill: #49496C;
+}
+
+.CountSubscribersBtn {
+    -fx-font-family: "Arial Bold";
+    -fx-font-size: 12px;
+    -fx-text-fill: #49496C;
+    -fx-background-color: #D9D9D9;
+    -fx-background-radius: 10px;
+    -fx-pref-width: 143px;
+    -fx-pref-height: 32px;
+    -fx-cursor: hand;
+}
+
+.SubscribersExemptText, .SubscribersNormalText, .RatioSubscribersText {
+    -fx-font-family: "Arial Bold";
+    -fx-font-size: 40px;
+    -fx-text-fill: #49496C;
+    -fx-opacity: 0.75;
+}
+
+.RatioSubscribersText {
+    -fx-font-size: 20px;
+}
+
+.CountDebtorsCardIcon {
+    -fx-fit-width: 70px;
+    -fx-fit-height: 61px;
+}
+
+.CountDebtorsText1, .CountDebtorsText2, .DescriptionGtsName, .DescriptionGtsCity, .ListAtcCardTitle  {
+    -fx-font-family: "Arial Bold";
+    -fx-font-size: 48px;
+    -fx-text-fill: #49496C;
+}
+
+.CountDebtorsText2 {
+    -fx-font-size: 25px;
+}
+
+.DescriptionCardBg {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 20px;
+    -fx-pref-width: 159px;
+    -fx-pref-height: 103px;
+}
+
+.DescriptionGtsImg {
+    -fx-fit-width: 54px;
+    -fx-fit-height: 191px;
+}
+
+.DescriptionGtsName {
+    -fx-font-size: 20px;
+    -fx-wrap-text: true;
+    -fx-text-alignment: center;
+}
+
+.DescriptionGtsCity {
+    -fx-font-size: 14px;
+}
+
+.ListAtcCardTitle {
+    -fx-font-size: 20px;
+}
+
+.table-view {
+    -fx-font-family: "Inter SemiBold";
+    -fx-font-size: 12px;
+    -fx-background-color: #49496C;
+    -fx-background-radius: 10px;
+    -fx-border-color: #A195B3;
+    -fx-border-width: 3;  
+    -fx-border-style: solid;
+}
+
+/* .table-view .column-header .table-column {
+    -fx-pref-width: 100px;
+}
+
+.table-view .column-header .table-column:nth-child(1) {
+    -fx-pref-width: 100px; 
+} */
+
+
+.table-view .column-header-background .label{
+    -fx-font-family: "Inter SemiBold";
+    -fx-font-size: 13px;
+    -fx-background-color: #444475;
+    -fx-text-fill: #c4c4d1;
+    -fx-alignment: CENTER;
+}
+
+.table-view .column-header {
+    -fx-background-color: #444475;
+    -fx-pref-height: 23px; 
+    -fx-border-color: #A195B3;
+    -fx-border-width: 0px 1px 0px 0px;
+}
+
+.table-row-cell {
+    -fx-font-family: "Inter SemiBold";
+    -fx-font-size: 12px;
+    -fx-background-color: #49496C;
+    -fx-border-color: #A195B3;
+    -fx-border-width: 0 0 1px 0;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #594574;
+}
+
+.table-cell {
+    -fx-border-color: #A195B3;
+    -fx-border-width: 0 1px 0 0;
+}
+
+.table-row-cell:filled .table-cell {
+    -fx-text-fill: #c4c4d1;
+}
+
+.ListSubscribersPopUp {
+    -fx-background-color: #9595D1;
+    -fx-border-width: 2px;
+    -fx-border-color: #575799;
+    -fx-background-radius: 10px;
+    -fx-min-width: 724px;
+    -fx-pref-height: 424px;
+}
+
+.ListSubscribersPopUpTitle {
+    -fx-font-family: "Arial Bold";
+    -fx-font-size: 20px;
+    -fx-text-fill: #333361;
+}
+
+.ListSubscribersPopUpBtn {
+    -fx-background-color: transparent;
+    -fx-background-image: url("../images/exetBtn2.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-cursor: hand;
+    -fx-pref-height: 30px;
+}
+
+/*Стили для окна "АТС" (админ)*/
+.AtsPanel {
+    -fx-background-color: #C1C1FF;
+    -fx-background-radius: 10px;
+}
+
+.AtsBoard {
+    -fx-background-color: #575799;
+    -fx-background-radius: 10px;
+    -fx-border-width: 1px;
+    -fx-border-color: #6E6EAA;
+    -fx-border-radius: 10px;
+    -fx-opacity: 0.67;
+    -fx-pref-height: 66px;
+    -fx-pref-width: 708px;
+}
+
+.AtsBoardLabel {
+    -fx-font-family: "Arial Bold";
+    -fx-font-size: 17px;
+    -fx-text-fill: #DDDDE1;
+}
+
+.AtsBoardBtn {
+    -fx-background-color: #49496C;
+    -fx-background-radius: 10px;
+    -fx-text-fill: #DDDDE1;
+    -fx-font-size: 16px;
+    -fx-pref-height: 39px;
+    -fx-pref-width: 110px;
+    -fx-cursor: hand;
+}
+
+.AtsBoardBtnDebtors {
+    -fx-pref-height: 39px;
+    -fx-pref-width: 176px;
+}
+
+.AtsBoardBtnBg {
+    -fx-background-color: #52528B;
+    -fx-background-radius: 10px;
+    -fx-pref-height: 39px;
+    -fx-pref-width: 110px;
+}
+
+.AtsPanelInputAndComboBox {
+    -fx-font-size: 14px;
+    -fx-prompt-text-fill: #49496C;
+    -fx-background-color: transparent;
+    -fx-border-radius: 8px;
+    -fx-border-width: 1.5px;
+    -fx-border-color: #6E6EAA;
+    -fx-pref-height: 39px;
+    -fx-pref-width: 150px;
+}
+
+.AtsPanelNameInput {
+    -fx-background-color: #C1C1FF;
+    -fx-font-size: 16px;
+    -fx-text-fill: #49496C;
+    -fx-padding: 0px 6px 0px 6px;
+}
+
+.atsTable {
+    -fx-font-family: "Inter SemiBold";
+    -fx-font-size: 16px;
+    -fx-background-color: #49496C;
+    -fx-background-radius: 10px;
+    -fx-border-color: #A195B3;
+    -fx-border-width: 3;  
+    -fx-border-style: solid;
+}
+
+#atsTable .column-header-background .label{
+    -fx-font-size: 15.5px;
+}
+
+#atsTable .column-header {
+    -fx-pref-height: 35px; 
+}
+
+#atsTable .table-row-cell {
+    -fx-font-size: 14px;
+    -fx-pref-height: 27px;
+}
+
+.SubscribersBtnQuery {
+    -fx-font-size: 15px;
+    -fx-background-color: #575799;
+    -fx-opacity: 0.92;
+    -fx-pref-height: 39px;
+    -fx-pref-width: 100px;
+}
+
+.AtsPanelInputAndComboBox .arrow-button, .ageOperatorComboBox .arrow-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0 5px 0 5px; 
+}
+
+.AtsPanelInputAndComboBox .arrow-button .arrow, .ageOperatorComboBox .arrow-button .arrow {
+    -fx-background-color: #49496C;
+    -fx-pref-width: 12px;
+    -fx-pref-height: 5px;
+}
+
+.SubscribersPanelFilterBtn {
+    -fx-background-color: #575799;
+    -fx-background-radius: 8px;
+    -fx-pref-width: 44px;
+    -fx-pref-height: 39px;
+    -fx-cursor: hand;
+}
+
+.SubscribersFilterPanel {
+    -fx-pref-width: 724px;
+    -fx-pref-height: 273px;
+    -fx-background-color: #9595D1;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-border-width: 2px;
+    -fx-border-color: #575799;
+}
+
+.SubscribersFilterPanelTitle{
+    -fx-font-family: "Arial Bold";
+    -fx-font-size: 22px;
+    -fx-text-fill: #333361;
+}
+
+.FilterName{
+    -fx-font-family: "Arial Regular";
+    -fx-font-size: 20px;
+    -fx-text-fill: #333361;
+}
+
+.ageOperatorComboBox {
+    -fx-background-color: #BDBDED;
+    -fx-background-radius: 8px;
+    -fx-pref-width: 39px;
+    -fx-pref-height: 31px;
+}
+
+.ageOperatorComboBox .list-cell {
+    -fx-text-fill: #333361;
+    -fx-opacity: 0.69;
+    -fx-font-size: 14px;
+    -fx-padding: 0 0 0 15px;
+}
+
+.ageOperatorComboBox .arrow-button .arrow {
+    -fx-background-color: #49496C;
+    -fx-pref-width: 8px;
+    -fx-pref-height: 3px;
+}
+
+.ageInput {
+    -fx-background-color: #BDBDED;
+    -fx-background-radius: 8px;
+    -fx-pref-width: 39px;
+    -fx-pref-height: 31px;
+}
+
+
+.chips {
+    -fx-background-color: #BDBDED;
+    -fx-text-fill: #333361;
+    -fx-font-size: 12px;
+    -fx-pref-width: 89px;
+    -fx-pref-height: 31px;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 15;
+    -fx-cursor: hand;
+}
+
+.check-box {
+    selected-box-color: #41417E;
+    box-color: transparent;
+    mark-color: transparent;
+}
+
+.check-box:selected {
+    -fx-text-fill: #9D9DCC;
+    -fx-background-color: selected-box-color;
+}
+
+.check-box > .box {
+    -fx-background-color: box-color;
+    -fx-border-width: 0;
+    -fx-padding: 0;
+}
+
+.check-box:selected > .box > .mark,
+.check-box:indeterminate  > .box > .mark {
+    -fx-background-color: mark-color;
+}
+
+.radio-button {
+    -fx-cursor: hand;
+    -fx-text-fill: #333361;
+    -fx-font-size: 16px;
+}
+
+.radio-button > .radio {
+    -fx-background-color: #9595D1; 
+    -fx-border-color: #333361;
+    -fx-border-width: 1px;   
+    -fx-border-radius: 50%;    
+    -fx-pref-width: 15px;      
+    -fx-pref-height: 15px; 
+    -fx-alignment: center;      
+}
+
+.radio-button:selected > .radio {
+    -fx-background-color: #9595D1; 
+    -fx-border-color: #333361;  
+    -fx-border-width: 1px;
+    -fx-border-radius: 50%;
+}
+
+.radio-button:selected > .radio > .dot {
+    -fx-background-color: #41417E;
+    -fx-border-radius: 50%;      
+    -fx-min-width: 7px;          
+    -fx-min-height: 7px;
+    -fx-background-insets: 0;
+}
+
+.PhonesPanelInputAndComboBox {
+    -fx-pref-width: 150px;
+}
+
+.PhonesBtnQuery {
+    -fx-pref-width: 200px;
+}
+
+.ReceiptsPanelInputAndComboBox {
+    -fx-pref-width: 200px;
+}

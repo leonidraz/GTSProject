@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" styleClass="EnterAndRegPanel" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project_gts.project_gts.controllers.forms.RegisterController">
+    <children>
+        <AnchorPane layoutX="38.0" layoutY="27.0" prefHeight="652.0" prefWidth="416.0" styleClass="RegForm">
+            <children>
+                <ImageView layoutX="165.0" layoutY="24.0">
+                    <image>
+                        <Image url="@../images/logo.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="82.0" layoutY="115.0" styleClass=".EnterAndRegFormTitle" text="РЕГИСТРАЦИЯ">
+                    <font>
+                        <Font name="Arial Bold" size="34.0" />
+                    </font>
+                </Label>
+                <TextField layoutX="30.0" layoutY="210.0" prefHeight="45.0" prefWidth="356.0" promptText="Имя" styleClass="EnterAndRegFormInput">
+                    <font>
+                        <Font name="Arial" size="20.0" />
+                    </font>
+                </TextField>
+                <TextField layoutX="30.0" layoutY="271.0" prefHeight="45.0" prefWidth="356.0" promptText="Фамилия" styleClass="EnterAndRegFormInput">
+                    <font>
+                        <Font name="Arial" size="20.0" />
+                    </font>
+                </TextField>
+                <Button layoutX="30.0" layoutY="577.0" mnemonicParsing="false" prefWidth="356.0" text="ЗАРЕГИСТРИРОВАТЬСЯ" textFill="WHITE">
+                    <font>
+                        <Font name="Arial" size="17.0" />
+                    </font>
+               <styleClass>
+                  <String fx:value="RegFormBtn" />
+                  <String fx:value="EnterAndRegFormBtn" />
+               </styleClass>
+                </Button>
+            <Label layoutX="30.0" layoutY="175.0" styleClass="RegFormGroupInput" text="Личные данные" textFill="#6a5688">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Label>
+            <TextField layoutX="30.0" layoutY="332.0" prefHeight="45.0" prefWidth="356.0" promptText="Отчество" styleClass="EnterAndRegFormInput">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+            </TextField>
+            <TextField layoutX="30.0" layoutY="393.0" prefHeight="45.0" prefWidth="356.0" promptText="Адрес" styleClass="EnterAndRegFormInput">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+            </TextField>
+            <Label layoutX="30.0" layoutY="467.0" styleClass="RegFormGroupInput" text="Данные для входа" textFill="#381275">
+               <font>
+                  <Font name="Arial" size="38.0" />
+               </font>
+            </Label>
+            <TextField layoutX="30.0" layoutY="500.0" prefHeight="45.0" prefWidth="356.0" promptText="Номер телефона" styleClass="EnterAndRegFormInput">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+            </TextField>
+            </children>
+        </AnchorPane>
+      <AnchorPane layoutX="492.0" prefHeight="700.0" prefWidth="508.0" styleClass="EnterAndRegContent">
+         <children>
+            <ImageView fitHeight="646.0" fitWidth="200.0" layoutX="308.0" layoutY="54.0">
+               <image>
+                  <Image url="@../images/reg_enter-bg.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="100.0" layoutY="153.0" prefHeight="126.0" prefWidth="310.0" styleClass="EnterAndRegContentTitle" text="Привет, пользователь!" textAlignment="CENTER" textFill="#9e1414" wrapText="true">
+               <font>
+                  <Font name="Century" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="61.0" layoutY="302.0" prefHeight="158.0" prefWidth="388.0" styleClass="EnterAndRegContentDescription" text="Ты уже с нами? Тогда смело нажимай кнопку “Войти”. Приятного пользования!" textAlignment="CENTER" textFill="#b55656" wrapText="true">
+               <font>
+                  <Font name="Batang" size="8.0" />
+               </font>
+            </Label>
+            <Button layoutX="184.0" layoutY="483.0" mnemonicParsing="false" onAction="#switchToEntry" styleClass="EnterAndRegContentBtn" text="ВХОД" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+               <padding>
+                  <Insets bottom="14.0" left="34.0" right="34.0" top="14.0" />
+               </padding>
+            </Button>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

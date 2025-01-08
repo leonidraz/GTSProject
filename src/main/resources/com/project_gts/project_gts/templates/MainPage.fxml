@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="MainPage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project_gts.project_gts.controllers.forms.MainController">
+   <children>
+      <VBox fx:id="popUpMenu" layoutX="16.0" layoutY="128.0" prefHeight="200.0" prefWidth="100.0" styleClass="PopUpMenu">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="52.0" prefWidth="100.0" styleClass="PopUpMenuInner">
+               <children>
+                  <ImageView fx:id="mainImageItemMenu" fitHeight="53.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true" styleClass="PopUpMenuIcon">
+                     <image>
+                        <Image url="@../images/homeIconActive.png" />
+                     </image>
+                  </ImageView>
+                  <Hyperlink fx:id="mainLinkItemMenu" onAction="#switchToGtsPage" prefHeight="32.0" prefWidth="95.0" text="Главная">
+                     <styleClass>
+                        <String fx:value="PopUpMenuLink" />
+                        <String fx:value="PopUpMenuLinkActive" />
+                     </styleClass></Hyperlink>
+               </children>
+            </HBox>
+            <HBox prefHeight="52.0" prefWidth="215.0" styleClass="PopUpMenuInner">
+               <children>
+                  <ImageView fx:id="atsImageItemMenu" fitHeight="53.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true" styleClass="PopUpMenuIcon">
+                     <image>
+                        <Image url="@../images/atcIcon.png" />
+                     </image>
+                  </ImageView>
+                  <Hyperlink fx:id="atsLinkItemMenu" onAction="#switchToAtsPage" styleClass="PopUpMenuLink" text="АТС" />
+               </children>
+            </HBox>
+            <HBox prefHeight="52.0" prefWidth="215.0" styleClass="PopUpMenuInner">
+               <children>
+                  <ImageView fx:id="SubImageItemMenu" fitHeight="53.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true" styleClass="PopUpMenuIcon">
+                     <image>
+                        <Image url="@../images/subscriberIcon.png" />
+                     </image>
+                  </ImageView>
+                  <Hyperlink fx:id="SubLinkItemMenu" onAction="#switchToSubscribersPage" styleClass="PopUpMenuLink" text="Абоненты" />
+               </children>
+            </HBox>
+            <HBox prefHeight="52.0" prefWidth="215.0" styleClass="PopUpMenuInner">
+               <children>
+                  <ImageView fx:id="PhoneImageItemMenu" fitHeight="53.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true" styleClass="PopUpMenuIcon">
+                     <image>
+                        <Image url="@../images/phoneIcon.png" />
+                     </image>
+                  </ImageView>
+                  <Hyperlink fx:id="PhoneLinkItemMenu" onAction="#switchToPhonesPage" styleClass="PopUpMenuLink" text="Телефоны" />
+               </children>
+            </HBox>
+            <HBox prefHeight="52.0" prefWidth="215.0" styleClass="PopUpMenuInner">
+               <children>
+                  <ImageView fx:id="ReceiptImageItemMenu" fitHeight="53.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true" styleClass="PopUpMenuIcon">
+                     <image>
+                        <Image url="@../images/receiptIcon.png" />
+                     </image>
+                  </ImageView>
+                  <Hyperlink fx:id="ReceiptLinkItemMenu" onAction="#switchToReceiptsPage" styleClass="PopUpMenuLink" text="Квитанции" />
+               </children>
+            </HBox>
+            <HBox prefHeight="52.0" prefWidth="215.0" styleClass="PopUpMenuInner">
+               <children>
+                  <ImageView fx:id="RequestImageItemMenu" fitHeight="53.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true" styleClass="PopUpMenuIcon">
+                     <image>
+                        <Image url="@../images/requestIcon.png" />
+                     </image>
+                  </ImageView>
+                  <Hyperlink fx:id="RequestLinkItemMenu" onAction="#switchToRequestPage" styleClass="PopUpMenuLink" text="Заявки" />
+               </children>
+            </HBox>
+            <HBox prefHeight="52.0" prefWidth="215.0" styleClass="PopUpMenuInner">
+               <children>
+                  <ImageView fx:id="CallsImageItemMenu" fitHeight="53.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true" styleClass="PopUpMenuIcon">
+                     <image>
+                        <Image url="@../images/callIcon.png" />
+                     </image>
+                  </ImageView>
+                  <Hyperlink fx:id="CallsLinkItemMenu" onAction="#switchToCallsPage" styleClass="PopUpMenuLink" text="Звонки" />
+               </children>
+            </HBox>
+         </children></VBox>
+      <AnchorPane layoutX="16.0" layoutY="15.0" prefHeight="200.0" prefWidth="200.0" styleClass="MainPanel">
+         <children>
+            <Button layoutX="15.0" layoutY="29.0" mnemonicParsing="false" onAction="#toggleMenu" styleClass="BurgerMenuBtn" />
+            <Label fx:id="namePage" layoutX="74.0" layoutY="27.0" prefHeight="45.0" prefWidth="174.0" styleClass="MainPanelTitle" text="Главная" />
+            <ComboBox fx:id="comboBoxGts" blendMode="SCREEN" layoutX="533.0" layoutY="27.0" maxWidth="350.0" minWidth="0.0" pickOnBounds="false" prefHeight="45.0" prefWidth="215.0" promptText="Выбрать ГТС" styleClass="MainPanelDropList">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </ComboBox>
+            <Button layoutX="907.0" layoutY="32.0" mnemonicParsing="false" onAction="#switchToEntry" styleClass="MainPanelExetBtn" />
+            <AnchorPane layoutX="762.0" layoutY="23.0" prefHeight="200.0" prefWidth="200.0" styleClass="MainPanelProfileContainer">
+               <children>
+                  <AnchorPane layoutX="11.0" layoutY="7.0" prefHeight="200.0" prefWidth="200.0" styleClass="MainPanelProfileCircle">
+                     <children>
+                        <Label layoutX="13.0" layoutY="4.0" styleClass="MainPanelProfileCircleText" text="A" />
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="60.0" layoutY="13.0" styleClass="MainPanelProfileContainerText" text="Admin" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="mainPanel" layoutX="254.0" layoutY="150.0" prefHeight="519.0" prefWidth="724.0">
+
+      </AnchorPane>
+   </children>
+</AnchorPane>
